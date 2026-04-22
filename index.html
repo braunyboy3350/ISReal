@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +17,12 @@
     .hero {
       position:relative; height:62vh; min-height:420px;
       background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80');
-      background-size:cover; background-position:center; background-repeat:no-repeat;
+      background-size:cover; background-position:center;
       display:flex; align-items:center; justify-content:center; flex-direction:column; text-align:center;
     }
     .hero::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(0,0,0,.45),rgba(0,0,0,.25)); }
     .hero-content { position:relative; z-index:2; color:#fff; }
-    .hero-content h1 { font-family:'Playfair Display',serif; font-size:clamp(3rem,8vw,5.5rem); font-weight:700; letter-spacing:.02em; }
+    .hero-content h1 { font-family:'Playfair Display',serif; font-size:clamp(3rem,8vw,5.5rem); font-weight:700; }
     .hero-content p  { font-size:1.1rem; letter-spacing:.25em; font-weight:300; margin-top:.4rem; }
     section { max-width:820px; margin:0 auto; padding:4rem 1.5rem; }
     section h2 { font-family:'Playfair Display',serif; font-size:2rem; text-align:center; margin-bottom:2rem; }
@@ -30,9 +31,8 @@
     ul.resume-list li { font-size:1rem; color:#333; }
     .skills-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(180px,1fr)); gap:1rem; }
     .skill-card { background:#fff; border:1px solid #e5e0d8; border-radius:6px; padding:1rem 1.2rem; text-align:center; font-size:.93rem; color:#444; box-shadow:0 2px 8px rgba(0,0,0,.04); }
-    footer { background:var(--dark); color:#aaa; text-align:center; padding:2rem 1rem; font-size:.85rem; letter-spacing:.05em; }
+    footer { background:var(--dark); color:#aaa; text-align:center; padding:2rem 1rem; font-size:.85rem; }
     footer a { color:var(--accent); text-decoration:none; }
-    footer a:hover { text-decoration:underline; }
   </style>
 </head>
 <body>
@@ -62,9 +62,7 @@
   <section id="experience">
     <h2>Work Experience</h2>
     <ul class="resume-list">
-      <!-- ✏️ Replace with your real jobs -->
-      <li><strong>Job Title</strong> – Company Name (Year–Year): Brief description of responsibilities.</li>
-      <li><strong>Job Title</strong> – Company Name (Year–Year): Brief description of responsibilities.</li>
+      <li><strong>Sales Representative</strong> – PMR Auto: Assisted customers in finding the right vehicle, managed client relationships, and consistently met monthly sales targets.</li>
     </ul>
   </section>
   <hr class="section-rule"/>
