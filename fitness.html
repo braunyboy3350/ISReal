@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fitness – Braun Andrus</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Serif+4:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet"/>
-  <!-- ✅ REQUIREMENT: Custom from-scratch stylesheet (no Bootstrap) -->
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- ✅ REQUIREMENT: Navigation back to professional pages -->
   <nav id="top-nav">
     <a href="index.html">&#8592; Home</a>
     <a href="fitness.html">Fitness</a>
@@ -18,13 +16,10 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <!-- ✅ REQUIREMENT: Custom background image (set in style.css on #hero) -->
   <div id="hero">
     <div id="hero-text">
       <h1>Fitness &amp; Wellness</h1>
       <p class="hero-sub">My health journey and outdoor lifestyle</p>
-
-      <!-- ✅ REQUIREMENT: On-page anchors -->
       <div id="anchor-links">
         <a href="#about">About</a>
         <a href="#routine">Routine</a>
@@ -32,35 +27,24 @@
         <a href="#video">Video</a>
         <a href="#gallery">Gallery</a>
         <a href="#data">Data</a>
-        <a href="#game-link">Play a Game</a>
+        <a href="#game-link">Game</a>
       </div>
     </div>
   </div>
 
-  <!-- ABOUT -->
   <div id="about" class="section-wrap">
     <div class="content-div">
       <h2>Why Fitness Matters to Me</h2>
-      <!-- ✏️ Replace with your own paragraphs -->
-      <p>
-        Fitness has been a cornerstone of my life since high school. Whether it's hitting the gym before class or going on long trail runs on weekends, staying active keeps me focused and energized for everything else I do.
-      </p>
-      <p>
-        I believe a healthy body fuels a sharp mind. Consistent exercise has helped me manage stress, maintain discipline, and build the kind of confidence that carries over into school and work.
-      </p>
-      <div id="quote-block">
-        <!-- ✏️ Replace with your own favorite quote -->
-        "Take care of your body. It's the only place you have to live." — Jim Rohn
-      </div>
+      <p>Fitness has been a cornerstone of my life since high school. Whether it's hitting the gym before class or going on long trail runs on weekends, staying active keeps me focused and energized for everything else I do.</p>
+      <p>I believe a healthy body fuels a sharp mind. Consistent exercise has helped me manage stress, maintain discipline, and build the kind of confidence that carries over into school and work.</p>
+      <div id="quote-block">"Take care of your body. It's the only place you have to live." — Jim Rohn</div>
     </div>
   </div>
 
-  <!-- ✅ REQUIREMENT: Ordered list with unordered lists nested inside -->
   <div id="routine" class="section-wrap alt-bg">
     <div class="content-div">
       <h2>My Weekly Routine</h2>
-      <p>Consistency is everything. Here's how I structure my week to stay on track:</p>
-
+      <p>Consistency is everything. Here's how I structure my week:</p>
       <ol id="tips-list">
         <li>
           <strong>Monday &amp; Thursday — Strength Training</strong>
@@ -83,7 +67,6 @@
           <ul>
             <li>Long run or hike depending on the weather.</li>
             <li>Aim for 8–12 miles total on weekends.</li>
-            <li>Great trails in the Wasatch Range nearby.</li>
           </ul>
         </li>
         <li>
@@ -97,18 +80,15 @@
     </div>
   </div>
 
-  <!-- TIPS SECTION -->
   <div id="tips" class="section-wrap">
     <div class="content-div">
       <h2>Top Fitness Tips</h2>
-      <!-- ✏️ Replace with your own tips -->
-      <p><strong>Stay consistent.</strong> Showing up on days you don't feel like it is where real progress is made. Three average workouts beat one perfect workout every time.</p>
-      <p><strong>Prioritize sleep.</strong> Recovery happens at night. Aim for 7–9 hours — it affects your performance more than almost anything else.</p>
-      <p><strong>Track your progress.</strong> Keep a simple log of your lifts or runs. Seeing improvement over time is one of the best motivators there is.</p>
+      <p><strong>Stay consistent.</strong> Showing up on days you don't feel like it is where real progress is made.</p>
+      <p><strong>Prioritize sleep.</strong> Recovery happens at night. Aim for 7–9 hours.</p>
+      <p><strong>Track your progress.</strong> Keep a simple log of your lifts or runs. Seeing improvement over time is one of the best motivators.</p>
     </div>
   </div>
 
-  <!-- ✅ REQUIREMENT: Embedded YouTube video -->
   <div id="video" class="section-wrap alt-bg">
     <div class="content-div center">
       <h2>Motivation</h2>
@@ -125,11 +105,9 @@
     </div>
   </div>
 
-  <!-- ✅ REQUIREMENT: Image not from Bootstrap theme -->
   <div id="gallery" class="section-wrap">
     <div class="content-div center">
       <h2>Out on the Trail</h2>
-      <!-- ✏️ Replace src with your own photo if desired -->
       <img
         id="feature-img"
         src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=900&q=80"
@@ -139,35 +117,30 @@
     </div>
   </div>
 
-  <!-- ✅ REQUIREMENT: Live interactive Tableau embed (not a screenshot) -->
+  <!-- TABLEAU — using Embedding API v3, the current standard that works -->
   <div id="data" class="section-wrap alt-bg">
     <div class="content-div center">
       <h2>Fitness Data Visualization</h2>
-      <p>Interactive Fitbit fitness tracker data — hover and explore below.</p>
-      <div id="tableau-wrap" style="width:100%;max-width:800px;margin:1.5rem auto 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,.1);">
-        <iframe
-          src="https://public.tableau.com/views/FitbitDashboard/Summary3?:embed=y&:showVizHome=no&:display_count=y&:toolbar=yes&:tabs=no"
+      <p>Interactive fitness data — hover and explore below.</p>
+      <div id="tableau-wrap">
+        <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+        <tableau-viz
+          id="tableauViz"
+          src="https://public.tableau.com/views/FitbitDashboard/Summary3"
           width="100%"
           height="550"
-          frameborder="0"
-          scrolling="no"
-          style="display:block;">
-        </iframe>
+          toolbar="bottom"
+          hide-tabs>
+        </tableau-viz>
       </div>
     </div>
   </div>
 
-  <!-- ✅ REQUIREMENT: Link to web app (game page) -->
   <div id="game-link" class="section-wrap">
     <div class="content-div center">
       <h2>Need a Mental Break?</h2>
       <p>I built a fully playable <strong>2048</strong> game — use arrow keys on desktop or swipe on mobile.</p>
-      <a href="game.html" style="
-        display:inline-block; margin-top:1.2rem;
-        background:#b07d3c; color:#fff; text-decoration:none;
-        padding:.75rem 2.2rem; border-radius:7px;
-        font-family:'Playfair Display',serif; font-size:1rem; letter-spacing:.05em;
-      ">Play 2048 &rarr;</a>
+      <a href="game.html" style="display:inline-block;margin-top:1.2rem;background:#b07d3c;color:#fff;text-decoration:none;padding:.75rem 2.2rem;border-radius:7px;font-family:'Playfair Display',serif;font-size:1rem;">Play 2048 &rarr;</a>
     </div>
   </div>
 
